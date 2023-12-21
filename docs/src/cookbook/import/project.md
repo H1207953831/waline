@@ -87,7 +87,9 @@ import { Waline } from '@waline/client/component';
 import { computed } from 'vue';
 import { useRoute } from 'vue-router';
 
-import '@waline/client/dist/waline.css';
+// import '@waline/client/dist/waline.css';
+// 上面是原来的导入，我发现在导入的过程中会报 './dist/waline.css' not found 错误，我尝试将/dist删除之后，运行正常。
+import '@waline/client/waline.css';
 
 const serverURL = 'https://waline.vercel.app';
 const path = computed(() => useRoute().path);
